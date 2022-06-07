@@ -8,21 +8,21 @@ do{
     echo "3. Calculate the Area of a Triangle";
     echo "4. Quit\n";
     echo "Enter your choice (1-4) : ";
-    $choice = readline();
+    $choice = (int)readline();
     $geometry = new Geometry();
     switch ($choice){
         case 1:
-            $radius = readline("Input radius: ");
+            $radius = (int)readline("Input radius: ");
             echo $geometry->circleArea($radius) .PHP_EOL;
             break;
         case 2:
-            $length = readline("Input rectangles length: ");
-            $height = readline("Input rectangles height: ");
+            $length = (int)readline("Input rectangles length: ");
+            $height = (int)readline("Input rectangles height: ");
             echo $geometry->rectangleArea($length, $height).PHP_EOL;
             break;
         case 3:
-            $baseLength = readline("Input triangles base length: ");
-            $height = readline("Input triangles height: ");
+            $baseLength = (int)readline("Input triangles base length: ");
+            $height = (int)readline("Input triangles height: ");
             echo $geometry->rectangleArea($baseLength, $height).PHP_EOL;
             break;
         case 4:
