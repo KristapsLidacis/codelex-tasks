@@ -1,11 +1,12 @@
 <?php
-
+//Write a program called CheckOddEven which prints "Odd Number" if the int variable “number” is odd, or “Even Number”
+// otherwise. The program shall always print “bye!” before exiting.
 $number = readline("Enter number: ");
 
-echo checkIfOdd($number);
+echo CheckOddEven($number);
 
 
-function checkIfOdd(int $x): string{
+function CheckOddEven(int $x): string{
     if($x % 2 === 0){
         return "Even number \n bye!" .PHP_EOL;
 

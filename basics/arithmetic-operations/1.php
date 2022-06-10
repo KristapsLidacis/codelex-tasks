@@ -1,4 +1,5 @@
 <?php
+//Write a program to accept two integers and return true if the either one is 15 or if their sum or difference is 15.
 $i1 = readline("Enter first number: ");
 $i2 = readline("Enter second number: ");
 
