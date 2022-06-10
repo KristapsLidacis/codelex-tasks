@@ -1,20 +1,12 @@
 <?php
-function display_board()
-{
-    echo "   |   |   \n";
-    echo "---+---+---\n";
-    echo "   |   |   \n";
-    echo "---+---+---\n";
-    echo "   |   |   \n";
-}
-//display_board();
+
 $gameTable = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
 $winner = false;
 $player = 0;
-$ticker = 0;
+
 
 while(!$winner){
-    switch($ticker){
+    switch($player){
         case 0:
             printTable($gameTable);
             //var_dump($gameTable);
@@ -30,19 +22,18 @@ while(!$winner){
                     }
                 }else {
                     echo "Write cords that are from 0 to 2" .PHP_EOL;
-                    $ticker = 0;
+                    $player = 0;
                     break;
                 }
             }else{
                 echo "Write cords that are from 0 to 2" .PHP_EOL;
-                $ticker = 0;
+                $player = 0;
                 break;
             }
 
             $winner = getWinner($gameTable);
             $player = 1;
 
-            $ticker++;
             break;
         case 1:
             printTable($gameTable);
@@ -59,17 +50,17 @@ while(!$winner){
                     }
                 }else {
                     echo "Write cords that are from 0 to 2" .PHP_EOL;
-                    $ticker = 1;
+                    $player = 1;
                     break;
                 }
             }else {
                 echo "Write cords that are from 0 to 2" . PHP_EOL;
-                $ticker = 1;
+                $player = 1;
                 break;
             }
             $winner = getWinner($gameTable);
             $player = 0;
-            $ticker--;
+
             break;
     }
 }
