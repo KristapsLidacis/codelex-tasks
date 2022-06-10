@@ -6,11 +6,11 @@ $numbers = [
 ];
 
 
-echo "Original numeric array: ";
+echo "Original numeric array: " .implode(', ', $numbers) .PHP_EOL;
 
+sort($numbers);
 
-
-echo "Sorted numeric array: " ;
+echo "Sorted numeric array: " .implode(', ', $numbers) .PHP_EOL;
 
 $words = [
     "Java",
@@ -22,7 +22,8 @@ $words = [
 ];
 
 
-echo "Original string array: ";
+echo "Original string array: " .implode(', ', $words) .PHP_EOL;
 
+sort($words);
 
-echo "Sorted string array: ";
+echo "Sorted string array: " .implode(', ', $words) .PHP_EOL;
