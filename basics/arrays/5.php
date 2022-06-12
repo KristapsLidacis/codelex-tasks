@@ -69,13 +69,13 @@ printTable($gameTable);
 echo $player === 1 ? "The winner is 'O'!":"The winner is 'X'" .PHP_EOL;
 echo 'Thank you for playing!';
 
-function printTable($table){
+function printTable(array $table): void{
     foreach ($table as $row){
         echo " " .implode(' | ', $row) .PHP_EOL;
         echo "---+---+---" .PHP_EOL;
     }
 }
-function getWinner($gameTable): bool{
+function getWinner(array $gameTable): bool{
     if($gameTable[0][0] === $gameTable[0][1]  && $gameTable[0][1] === $gameTable[0][2]){
         if($gameTable[0][0] != ' ') {
             return true;
