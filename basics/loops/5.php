@@ -21,10 +21,6 @@ do{
     }
     echo "Roll again? ";
     $prompt = strtolower(readLine());
-
-
-
-
 }while(!$stop);
 
 echo "You got $score points";
